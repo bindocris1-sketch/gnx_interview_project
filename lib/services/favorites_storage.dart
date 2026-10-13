@@ -10,6 +10,7 @@ class FavoritesStorage {
     final jsonList = prefs.getStringList(_key) ?? [];
 
     return jsonList.map((item) {
+
       return Photo.fromJson(
         jsonDecode(item) as Map<String, dynamic>,
       );
